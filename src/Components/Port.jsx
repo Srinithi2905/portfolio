@@ -1,12 +1,11 @@
 import React from 'react'
 import './Port.css'
+import Projects from './Projects'
 
 export default function Port() {
     return (
         <div>
             <section className='Navbar'>
-
-
                 <nav className="bg-gray-900 py-3 w-full">
                     <div className="max-w-[1400px] mx-auto flex items-center justify-between px-4 lg:px-8 xl:px-12 2xl:px-16">
                         <img
@@ -176,9 +175,11 @@ export default function Port() {
 
                     {/* Projects Section */}
                     <div className="mt-8 bg-white p-6 shadow-lg rounded-lg">
-                        <h3 className="text-lg sm:text-xl font-semibold text-gray-800 underline">Project</h3>
-
-                        {/* Employee Management System */}
+                        {/* <h3 className="text-lg sm:text-xl font-semibold text-gray-800 underline">Project</h3> */}
+                        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">
+                            My Projects
+                        </h2>
+                        {/* Employee Management System
                         <div className="mt-4">
                             <h5 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
                                 <i className="fa-solid fa-circle-dot text-[#e66c8e]"></i> Employee Management System (Admin Panel)
@@ -210,7 +211,8 @@ export default function Port() {
                                     </li>
                                 </ul>
                             </p>
-                        </div>
+                        </div> */}
+                        <Projects />
                     </div>
                 </div>
             </section>
