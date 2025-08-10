@@ -1,8 +1,10 @@
 import React from 'react'
 import './Port.css'
 import Projects from './Projects'
+import { motion } from "framer-motion";
 
 export default function Port() {
+
     return (
         <div>
             <section className='Navbar'>
@@ -22,7 +24,12 @@ export default function Port() {
                 <div className="container mx-auto flex flex-col md:flex-row items-center justify-between p-6 2xl:px-20 2xl:py-10">
 
                     {/* Left Side - Text */}
-                    <div className="text-center md:text-left flex flex-col md:ml-12">
+                    <motion.div
+                        className="text-center md:text-left flex flex-col md:ml-12"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, ease: "easeInOut" }}
+                    >
                         <h2 className="text-2xl sm:text-3xl md:text-4xl 2xl:text-5xl font-bold text-gray-900">
                             Hello, I am
                         </h2>
@@ -32,7 +39,7 @@ export default function Port() {
                         <h5 className="text-md sm:text-lg md:text-xl 2xl:text-2xl text-gray-700">
                             MERN Stack Developer
                         </h5>
-                    </div>
+                    </motion.div>
 
                     {/* Right Side - Image */}
                     <div className="hidden md:block w-1/3 lg:w-1/4 2xl:w-1/5 pt-3">
@@ -47,7 +54,7 @@ export default function Port() {
                 <div className="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 2xl:gap-x-16 gap-6">
 
                     {/* Who Am I? */}
-                    <div className="bg-white p-4 lg:p-5 shadow-lg rounded-lg lg:h-[330px] xl:h-[350px] 2xl:h-auto flex flex-col justify-between ">
+                    <div className="bg-white p-4 lg:p-5 shadow-lg rounded-lg lg:h-[330px] xl:h-[350px] 2xl:h-auto flex flex-col justify-between transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl ">
                         <h3 className="text-lg md:text-xl xl:text-2xl !font-bold !text-[#e66c8e]">Who Am I?</h3>
                         <strong className="block text-gray-700 text-sm lg:text-base xl:text-lg">
                             A Web Designer / MERN Stack Developer & Coding Enthusiast
@@ -59,30 +66,33 @@ export default function Port() {
                     </div>
 
                     {/* Personal Info */}
-                    <div className="bg-white p-6 xl:p-5 shadow-lg rounded-lg lg:h-[330px] xl:h-[350px] 2xl:h-auto flex flex-col justify-between">
+                    <div className="bg-white p-6 xl:p-4 shadow-lg rounded-lg lg:h-[330px] xl:h-[350px] 2xl:h-auto flex flex-col justify-between transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
                         <h3 className="text-lg md:text-xl xl:text-2xl !font-bold !text-[#e66c8e]">Personal Info</h3>
 
                         {/* Grid for alignment */}
-                        <div className="grid grid-cols-2 gap-y-1 gap-x-1 text-gray-700 text-[13px] lg:text-[14px] xl:text-lg">
+                        <div className="grid grid-cols-2 gap-y-1  text-gray-700 text-[13px] lg:text-[14px] xl:text-lg">
                             <strong>Name:</strong> <span className="text-gray-600">Srinithi</span>
                             <strong>BirthDate:</strong> <span className="text-gray-600">29.05.2004</span>
                             <strong>Email:</strong>
-                            <span className="text-gray-600  underline text-[13px] !lg:text-sm xl:text-[16px]  break-words">srinithi.tec@gmail.com</span>
+                            <a href="mailto:srinithi.tec@gmail.com" className="!text-gray-600 underline text-[13px] !lg:text-sm xl:text-[16px] break-words">
+                                srinithi.tec@gmail
+                            </a>
+
                             <strong>Phone:</strong> <span className="text-gray-600">8xxxxxx362</span>
                             <strong>Address:</strong> <span className="text-gray-600">Trichy, TN</span>
                             <strong>Nationality:</strong> <span className="text-gray-600">India</span>
                             <strong>Languages:</strong> <span className="text-gray-600">English, Tamil</span>
                             <strong>LinkedIn:</strong>
                             <a href="https://www.linkedin.com/in/k-srinithi-29-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                                className="!text-gray-500 underline text-[13px] !lg:text-sm xl:text-[14px]  break-words">
-                                linkedin.com/in/srinithi
+                                className="!text-gray-500 underline text-[13px] !lg:text-sm xl:text-[16px]  break-words">
+                                /k-srinithi-29
                             </a>
                         </div>
                     </div>
 
 
                     {/* My Expertise */}
-                    <div className="bg-white p-4 lg:p-5 shadow-lg rounded-lg lg:h-[330px] xl:h-[350px] 2xl:h-auto flex flex-col justify-between">
+                    <div className="bg-white p-4 lg:p-5 shadow-lg rounded-lg lg:h-[330px] xl:h-[350px] 2xl:h-auto flex flex-col justify-between transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
                         <h3 className="text-lg md:text-xl xl:text-2xl !font-bold !text-[#e66c8e]">My Expertise</h3>
                         <p className="text-gray-700 text-sm md:text-base lg:text-[14px] xl:text-base ">
                             <strong className="flex items-center gap-2 ">
@@ -112,7 +122,7 @@ export default function Port() {
                     <h2 className="text-center text-2xl sm:text-3xl font-bold text-gray-900 mb-6">My Resume</h2>
 
                     {/* Expertise & Education Section */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5 ">
                         {/* Expertise */}
                         <div className="bg-white p-6 shadow-lg rounded-lg">
                             <h3 className="text-lg sm:text-xl font-semibold text-gray-800 underline">Expertise</h3>
@@ -172,6 +182,70 @@ export default function Port() {
                             </div>
                         </div>
                     </div>
+                    {/* expereince */}
+                    <section id="experience" className="py-12 ">
+                        <div className="max-w-6xl mx-auto ">
+                            <h2 className="text-center text-2xl md:text-3xl font-bold text-gray-800 !mb-10">
+                                My Experience
+                            </h2>
+
+                            <motion.div
+                                className="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition-shadow duration-300"
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6 }}
+                            >
+                                <h3 className="text-xl font-semibold text-gray-800">
+                                    Junior MERN Stack Developer
+                                </h3>
+                                <p className=" text-sm !text-[#e66c8e]">
+                                    Travelfika • Feb 2025 – Jul 2025 (6 months)
+                                </p>
+                                <ul className="mt-4 list-disc list-inside space-y-3 text-gray-700 marker:text-[#e66c8e]  text-sm sm:text-base break-words">
+                                    <li>
+                                        Working on updating and enhancing an existing website, improving its functionality and user experience.
+                                    </li>
+                                    <li>
+                                        Gaining hands-on experience in full stack development with MongoDB, Express.js, React.js, and Node.js while contributing to real-world projects.
+                                    </li>
+                                    <li>
+                                        Collaborated with UI/UX designers to build responsive and user-friendly interfaces, developing React pages utilizing Next.js routing and Tailwind styling.
+                                    </li>
+                                    <li>
+                                        Pages:{" "}
+                                        <a
+                                            href="https://www.travelfika.com/honeymoon-packages"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-[#e66c8e] hover:underline break-all"
+                                        >
+                                            Honeymoon Packages
+                                        </a>
+                                        ,{" "}
+                                        <a
+                                            href="https://www.travelfika.com/wedding-destinations"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-[#e66c8e] hover:underline break-all"
+                                        >
+                                            Wedding Destinations
+                                        </a>
+                                        ,{" "}
+                                        <a
+                                            href="https://www.travelfika.com/app"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-[#e66c8e] hover:underline break-all"
+                                        >
+                                            App
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </motion.div>
+                        </div>
+                    </section>
 
                     {/* Projects Section */}
                     <div className="mt-8 bg-white p-6 shadow-lg rounded-lg">
@@ -179,39 +253,6 @@ export default function Port() {
                         <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">
                             My Projects
                         </h2>
-                        {/* Employee Management System
-                        <div className="mt-4">
-                            <h5 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                                <i className="fa-solid fa-circle-dot text-[#e66c8e]"></i> Employee Management System (Admin Panel)
-                            </h5>
-                            <h6 className="text-sm text-gray-600">January - February (2025)</h6>
-
-                            <span className="block text-gray-700 mt-2">
-                                <b>Description:</b> Developed a MERN stack-based system to manage employee data efficiently.
-
-                            </span>
-
-                            <p className="mt-3 text-gray-700">
-                                <b>Key Contributions:</b>
-                                <ul className="list-none mt-1 space-y-2">
-                                    <li className="flex items-start gap-2">
-                                        <i className="fa-solid fa-star text-[#e66c8e]"></i>  Built a responsive dashboard using React.js & Bootstrap for an intuitive admin interface.
-                                    </li>
-                                    <li className="flex items-start gap-2">
-                                        <i className="fa-solid fa-star text-[#e66c8e]"></i>  Developed CRUD functionalities to manage employee details (Add, Update, Delete).
-                                    </li>
-                                    <li className="flex items-start gap-2">
-                                        <i className="fa-solid fa-star text-[#e66c8e]"></i> Designed a minimalist login system where admins log in/out by clicking on an employee image card.
-                                    </li>
-                                    <li className="flex items-start gap-2">
-                                        <i className="fa-solid fa-star text-[#e66c8e]"></i> Integrated MongoDB with Mongoose for structured data management.
-                                    </li>
-                                    <li className="flex items-start gap-2">
-                                        <i className="fa-solid fa-star text-[#e66c8e]"></i> Optimized API performance with Node.js and Express.js.
-                                    </li>
-                                </ul>
-                            </p>
-                        </div> */}
                         <Projects />
                     </div>
                 </div>
@@ -286,38 +327,3 @@ export default function Port() {
 
     )
 }
-{/* <div className='card2 row col'>
-                        <h3 className='card-body'><u>Projects</u></h3>
-
-                        <div className="bg-white p-6 shadow-lg rounded-lg">
-                            <h5 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                                <i className="fa-solid fa-circle-dot text-[#e66c8e]"></i> Employee Management System (Admin Panel)
-                            </h5>
-                            <h6 className="text-sm text-gray-600">January - February (2025)</h6>
-
-                            <span className="block text-gray-700 mt-2">
-                                <b>Description:</b> Developed a **MERN stack-based** admin panel to manage employee records, track attendance, and streamline HR operations.
-                            </span>
-
-                            <p className="mt-3 text-gray-700">
-                                <b>Key Contributions:</b>
-                                <ul className="list-none mt-1 space-y-2">
-                                    <li className="flex items-start gap-2">
-                                        <i className="fa-solid fa-star text-[#e66c8e]"></i> Built a responsive dashboard using React.js & Tailwind CSS for an intuitive admin interface.
-                                    </li>
-                                    <li className="flex items-start gap-2">
-                                        <i className="fa-solid fa-star text-[#e66c8e]"></i> Developed CRUD functionalities to manage employee details (Add, Update, Delete).
-                                    </li>
-                                    <li className="flex items-start gap-2">
-                                        <i className="fa-solid fa-star text-[#e66c8e]"></i> Designed a minimalist login system where admins log in/out by clicking on an employee image card.
-                                    </li>
-                                    <li className="flex items-start gap-2">
-                                        <i className="fa-solid fa-star text-[#e66c8e]"></i> Integrated MongoDB with Mongoose for structured data management.
-                                    </li>
-                                    <li className="flex items-start gap-2">
-                                        <i className="fa-solid fa-star text-[#e66c8e]"></i> Optimized API performance with Node.js and Express.js.
-                                    </li>
-                                </ul>
-                            </p>
-                        </div>
-                    </div> */}
